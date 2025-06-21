@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body bgcolor="yellow">
+<p th:text="${name}"></p>
+<!-- <p th:text="${emp.eid}"></p>
+<p th:text="${emp.ename}"></p>
+<p th:text="${emp.esal}"></p> -->
+<div th:object="${emp}">
+  <p th:text="*{eid}"></p>
+  <p th:text="*{ename}"></p>
+  <p th:text="*{esal}"></p>
+</div>
+</body>
+</html>

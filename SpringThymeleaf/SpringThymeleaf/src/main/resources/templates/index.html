@@ -1,0 +1,9 @@
+<html xmlns:th="http://www.thymeleaf.org">
+   <body bgcolor="cyan">
+      <form  th:action="@{./addEmp}">
+         Enter Employee Name : <input type="text" th:name="${ename}"/><br/>
+         Enter Employee Salary : <input type="text" th:name="${esal}"/><br/>
+         <button type="submit">Add Employee</button>
+      </form>
+   </body>
+</html>
