@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body bgcolor="cyan">
+		<table border="3">
+			<tr><th>Rollno</th><th>Name</th><th>Branch</th>
+			<tr th:each="st: ${all}">
+			<td th:text="${st.rollno}"></td>
+			<td th:text="${st.name}"></td>
+			<td th:text="${st.branch}"></td>
+			</tr>
+		</table>
+		
+		<form role="form" th:action="@{/user/addstudent}" >
+			Enter name : <input type="text" th:field="${sb.name}"/><br/>
+			Enter branch : <input type="text" th:field="${sb.branch}"/><br/>
+			<button type="submit">Add Student</button>
+			
+		</form>
+</body>
+ 
+</html>

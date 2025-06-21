@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <body bgcolor="pink">
+     <p th:text="${data}"></p>
+     <p th:text="${student.rollno}"></p>
+     <p th:text="${student.name}"></p>
+     <p th:text="${student.branch}"></p>
+     
+     <div th:object="${student}">
+      <p th:text="*{rollno}"></p>
+      <p th:text="*{name}"></p>
+      <p th:text="*{branch}"></p>
+     </div>
+  </body>
+</html>
